@@ -17,7 +17,7 @@
     <section class="grid-container">
 
       <template v-for="{ id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } in products" :key="id">
-        <div v-if="estado != 'vendido'" class="grid-item">
+        <div v-if="estado === 'disponible' || estado === 'reservado'" class="grid-item">
           <span v-if="estado === 'reservado'" class="badge">Reservado</span>
           <!-- <img src="`../assets/vue.svg`" :alt="`Imagen de ${nombre}`"> -->
           <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`">
