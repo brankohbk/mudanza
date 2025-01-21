@@ -75,7 +75,7 @@ function getIMGPath(id) {
   /* flex-direction: column; */
   gap: 1rem;
   padding: 1rem;
-  background: #3a3a3a;
+  background: light-dark(#efedea, #3a3a3a) ;
   border-radius: .25rem;
   box-shadow: 1px 1px .15rem #c664ff;
 
