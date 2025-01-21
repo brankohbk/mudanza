@@ -16,16 +16,16 @@
     <h2>Productos</h2>
     <section class="grid-container">
 
-      <template v-for="{ id, nombre, descripcion, disponibilidad, precio, estado } in products" :key="id">
+      <template v-for="{ id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } in products" :key="id">
         <div v-if="estado != 'vendido'" class="grid-item">
           <span v-if="estado === 'reservado'" class="badge">Reservado</span>
           <!-- <img src="`../assets/vue.svg`" :alt="`Imagen de ${nombre}`"> -->
           <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`">
           <div>
             <h3>{{ nombre.toUpperCase() }}</h3>
-            <p>{{ descripcion }}</p>
+            <!-- <p>{{ descripcion }}</p> -->
             <p>Disponible para retiro el día: {{ disponibilidad }}</p>
-            <p>{{ Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio) }}</p>
+            <p>Precio <span class="tipo-precio" :class="tipo_precio">{{ tipo_precio }}</span>: {{ Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio) }}</p>
             <RouterLink :to="`./productdetail/${id}`">Ver más</RouterLink>
           </div>
         </div>
@@ -115,6 +115,7 @@ function getIMGPath(id) {
   }
 
   a{
+    margin-top: auto;
     background:hsl(278, 100%, 70%);
     padding: .5rem;    
     border-radius: .25rem;

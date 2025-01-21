@@ -58,6 +58,17 @@ button:focus-visible {
   padding: 2em;
 }
 
+.tipo-precio{
+  padding: 0em .2em;
+  &.sugerido{
+    background-color: rgba(46, 173, 78, 0.3);
+  }
+  
+  &.final{
+    background-color: rgba(255, 81, 0, 0.3);
+  }
+}
+
 #app {
   padding: 2rem;
   width: 100%;

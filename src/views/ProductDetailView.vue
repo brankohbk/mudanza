@@ -18,7 +18,7 @@
         <h3>{{ nombre.toUpperCase() }}</h3>
         <p>{{ descripcion }}</p>
         <p>Disponible para retiro el día: {{ disponibilidad }}</p>
-        <p>{{ Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio) }}</p>
+        <p>Precio <span class="tipo-precio" :class="tipo_precio">{{ tipo_precio }}</span>: {{ Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio) }}</p>
       </div>
       <a aria-label="Chat on WhatsApp" :href="`https://wa.me/${telefono}?text=${encodedMessage}`" target="_blank">
         <img alt="Chat on WhatsApp" src="@/assets/WhatsAppButtonGreenSmall.svg" />
@@ -40,7 +40,7 @@ const route = useRoute()
 // access the `store` variable anywhere in the component ✨
 const store = useProductsStore()
 const { products } = storeToRefs(store)
-const { id, nombre, descripcion, disponibilidad, precio, estado } = products.value.find(product => product.id === route.params.id)
+const { id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } = products.value.find(product => product.id === route.params.id)
 const telefono = import.meta.env.VITE_TELEFONO
 const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre}* \nID: ${id}\n`)
 
@@ -70,4 +70,5 @@ img {
   /* aspect-ratio: 1/2; */
   object-fit: contain;
 }
+
 </style>
