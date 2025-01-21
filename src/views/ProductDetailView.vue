@@ -11,7 +11,8 @@
 
       <span v-if="estado === 'reservado'" class="badge">Reservado</span>
 
-      <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`" />
+      <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`" @error="$event.target.src = '/vite.svg'"/>
+      <img :src="`/img/${id}_b.jpg`" :alt="`Otra imagen de ${nombre}`" @error="$event.target.style.display = 'none'"/>
 
       <div>
         <h3>{{ nombre.toUpperCase() }}</h3>
@@ -41,7 +42,7 @@ const store = useProductsStore()
 const { products } = storeToRefs(store)
 const { id, nombre, descripcion, disponibilidad, precio, estado } = products.value.find(product => product.id === route.params.id)
 const telefono = import.meta.env.VITE_TELEFONO
-const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre}* | ${id}\n`)
+const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre}* \nID: ${id}\n`)
 
 
 </script>
@@ -64,7 +65,8 @@ section{
 }
 
 img {
-  max-width: 15rem;
+  max-width: 25rem;
   aspect-ratio: 1;
+  object-fit: cover;
 }
 </style>
