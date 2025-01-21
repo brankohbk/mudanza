@@ -65,8 +65,9 @@ section{
 }
 
 img {
-  max-width: 25rem;
-  aspect-ratio: 1;
-  object-fit: cover;
+  /* max-height: 80dvh; */
+  max-width: 100%;
+  /* aspect-ratio: 1/2; */
+  object-fit: contain;
 }
 </style>

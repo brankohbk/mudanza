@@ -1,13 +1,17 @@
 <template>
   <div>
+    
     <h1>¡Me mudo!</h1>
-    <article>
-      <h2>Contexto:</h2>
-      <p>Tengo que dejar en febrero el departamento que habito en el barrio de Palermo, Ciudad de Buenos Aires y vendo
-        casi todo.</p>
-      <p>Te invito a ver el listado y ponerte en contacto por WhatsApp para reservar lo que quieras comprar.</p>
-      <p>Si te interesa más de una cosa, podemos armar algún combo con descuentos.</p>
-    </article>
+    <div class="hero">
+      <img src="/img/logo.png" alt="Logo de Branko">
+      <article>
+        <h2>Contexto:</h2>
+        <p>Tengo que dejar en febrero el departamento que habito en el barrio de Palermo, Ciudad de Buenos Aires y vendo
+          casi todo.</p>
+          <p>Te invito a ver el listado y ponerte en contacto por WhatsApp para reservar lo que quieras comprar.</p>
+          <p>Si te interesa más de una cosa, podemos armar algún combo con descuentos.</p>
+        </article>
+      </div>
 
     <h2>Productos</h2>
     <section class="grid-container">
@@ -26,10 +30,7 @@
           </div>
         </div>
       </template>
-
-
     </section>
-
   </div>
 </template>
 
@@ -54,6 +55,12 @@ function getIMGPath(id) {
 </script>
 
 <style scoped>
+.hero {
+  img{
+    float:right;
+    shape-outside: url('/img/logo.png');
+  }
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
@@ -98,7 +105,27 @@ function getIMGPath(id) {
   }
   
   >div {
-    flex: 2
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    >*{
+      /* box-shadow: inset 0 0 1rem #c664ff; */
+      margin: .2rem 0;
+    }
+  }
+
+  a{
+    background:hsl(278, 100%, 70%);
+    padding: .5rem;    
+    border-radius: .25rem;
+    text-align: center;
+    color: #222;
+    text-decoration: none;
+    transition: background .3s, color .3s;
+    &:hover{
+      color: #ccc;
+      background:  hsl(278, 100%, 40%);
+    }
   }
   
   @media screen and (max-width: 768px) {
