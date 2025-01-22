@@ -42,7 +42,7 @@ const store = useProductsStore()
 const { products } = storeToRefs(store)
 const { id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } = products.value.find(product => product.id === route.params.id)
 const telefono = import.meta.env.VITE_TELEFONO
-const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre}* \nID: ${id}\n`)
+const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre.toUpperCase()}* \nID: ${id}\n`)
 
 
 </script>
