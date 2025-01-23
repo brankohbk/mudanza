@@ -54,6 +54,7 @@ section{
 }
 .badge {
   position: absolute;
+  z-index: 999;
   top: 0;
   right: 0;
   background: rgb(255, 187, 0);
