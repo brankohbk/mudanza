@@ -10,6 +10,8 @@
           casi todo.</p>
           <p>Te invito a ver el listado y ponerte en contacto por WhatsApp para reservar lo que quieras comprar.</p>
           <p>Si te interesa más de una cosa, podemos armar algún combo con descuentos.</p>
+          <p>Si el precio dice <span class="tipo-precio final">final</span>, quiere decir que lo rebajé lo más que pude.</p>
+          <p>Si el precio dice <span class="tipo-precio sugerido">sugerido</span>, <strong>escucho ofertas.</strong> </p>
         </article>
       </div>
 
