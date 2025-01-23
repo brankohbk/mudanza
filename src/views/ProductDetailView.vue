@@ -13,6 +13,7 @@
 
       <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`" @error="$event.target.src = '/vite.svg'"/>
       <img :src="`/img/${id}_b.jpg`" :alt="`Otra imagen de ${nombre}`" @error="$event.target.style.display = 'none'"/>
+      <img :src="`/img/${id}_c.jpg`" :alt="`Otra imagen de ${nombre}`" @error="$event.target.style.display = 'none'"/>
 
       <div>
         <h3>{{ nombre.toUpperCase() }}</h3>
