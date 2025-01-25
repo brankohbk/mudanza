@@ -79,7 +79,7 @@ function getIMGPath(id) {
   padding: 1rem;
   background: light-dark(#efedea, #3a3a3a) ;
   border-radius: .25rem;
-  box-shadow: 1px 1px .15rem #c664ff;
+  box-shadow: 1px 1px .15rem light-dark(transparent, #c664ff);
 
 
   .badge {
