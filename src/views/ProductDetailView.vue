@@ -8,9 +8,7 @@
     <p>Product ID: {{ $route.params.id }}</p>
 
     <section>
-
       <span v-if="estado === 'reservado'" class="badge">Reservado</span>
-
       <div>
         <h3>{{ nombre.toUpperCase() }}</h3>
         <p>{{ descripcion }}</p>
@@ -73,6 +71,19 @@ img {
   max-width: 100%;
   /* aspect-ratio: 1/2; */
   object-fit: contain;
+}
+a:has(small) {
+  max-width: fit-content;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: start;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #25d3653f;
+  color: light-dark(#333,#ddd) ;
+  border-radius: .25rem;
+  /* text-decoration: none; */
 }
 
 </style>
