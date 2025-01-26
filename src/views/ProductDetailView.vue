@@ -19,6 +19,7 @@
       </div>
       <a aria-label="Chat on WhatsApp" :href="`https://wa.me/${telefono}?text=${encodedMessage}`" target="_blank">
         <img alt="Chat on WhatsApp" src="@/assets/WhatsAppButtonGreenSmall.svg" />
+        <small>Hablemos por WhatsApp</small>
       </a>
       
       <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`" @error="$event.target.src = '/vite.svg'"/>
