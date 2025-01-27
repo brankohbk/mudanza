@@ -44,7 +44,7 @@ const { products } = storeToRefs(store)
 const { id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } = products.value.find(product => product.id === route.params.id)
 const telefono = import.meta.env.VITE_TELEFONO
 const precioFormateado = Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio)
-const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre.toUpperCase()}* \nID: ${id}\nPrecio:$ ${precioFormateado}\n`)
+const encodedMessage = encodeURI(`Hola! Me interesa el producto:\n*${nombre.toUpperCase()}* \nID: ${id}\nPrecio: ${precioFormateado}\n`)
 
 
 </script>
