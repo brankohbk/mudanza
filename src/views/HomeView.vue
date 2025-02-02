@@ -6,7 +6,7 @@
       <img src="/img/logo.png" alt="Logo de Branko">
       <article>
         <h2>... aún pueden aprovechar a comprar cosas baratas.</h2>
-<p>De paso me ayudan a hacer espacio en mi nueva casa.<p>
+<p>De paso me ayudan a hacer espacio en mi nueva casa.</p>
         <p>Dejé en febrero de 2025 el departamento que habitaba en el barrio de Palermo, Ciudad de Buenos Aires y vendo
           casi todo.</p>
           <p>Te invito a ver el listado y ponerte en contacto por WhatsApp para reservar lo que quieras comprar.</p>
