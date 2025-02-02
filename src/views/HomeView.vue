@@ -1,25 +1,26 @@
 <template>
   <div>
     
-    <h1>¡Me mudo!</h1>
-    <div class="hero">
+    <h1>Ok, ya me mudé. Pero...</h1>
+    <section class="hero">
       <img src="/img/logo.png" alt="Logo de Branko">
       <article>
-        <h2>Contexto:</h2>
-        <p>Tengo que dejar en febrero el departamento que habito en el barrio de Palermo, Ciudad de Buenos Aires y vendo
+        <h2>... aún pueden aprovechar a comprar cosas baratas.</h2>
+<p>De paso me ayudan a hacer espacio en mi nueva casa.<p>
+        <p>Dejé en febrero de 2025 el departamento que habitaba en el barrio de Palermo, Ciudad de Buenos Aires y vendo
           casi todo.</p>
           <p>Te invito a ver el listado y ponerte en contacto por WhatsApp para reservar lo que quieras comprar.</p>
           <p>Si te interesa más de una cosa, podemos armar algún combo con descuentos.</p>
           <p>Si el precio dice <span class="tipo-precio final">final</span>, quiere decir que lo rebajé lo más que pude.</p>
           <p>Si el precio dice <span class="tipo-precio sugerido">sugerido</span>, <strong>escucho ofertas.</strong> </p>
         </article>
-      </div>
+      </section>
 
     <h2>Productos</h2>
     <section class="grid-container">
 
       <template v-for="{ id, nombre, descripcion, disponibilidad, precio, tipo_precio, estado } in products" :key="id">
-        <div v-if="estado === 'disponible' || estado === 'reservado'" class="grid-item">
+        <article v-if="estado === 'disponible' || estado === 'reservado'" class="grid-item">
           <span v-if="estado === 'reservado'" class="badge">Reservado</span>
           <!-- <img src="`../assets/vue.svg`" :alt="`Imagen de ${nombre}`"> -->
           <img :src="`/img/${id}.jpg`" :alt="`Imagen de ${nombre}`">
@@ -30,7 +31,7 @@
             <p>Precio <span class="tipo-precio" :class="tipo_precio">{{ tipo_precio }}</span>: {{ Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio) }}</p>
             <RouterLink :to="`./productdetail/${id}`">Ver más</RouterLink>
           </div>
-        </div>
+        </article>
       </template>
     </section>
   </div>
